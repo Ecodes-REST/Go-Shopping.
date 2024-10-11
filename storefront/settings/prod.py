@@ -9,15 +9,9 @@ SECRET_KEY= os.environ.get('SECRET_KEY')
 ALLOWED_HOSTS = ['name-it-we-got-it-production.up.railway.app']
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'HOST': 'postgres.railway.internal',
-        'PORT':'57126',
-        'USER': 'postgres',
-        'PASSWORD': 'rlpEUfMXlOAwnVZsHXxbMIbuTdeUPoxO'
-    }
+    'default': dj_database_url.config('postgresql://postgres:rReYgaApwcrnjwBhEGQPtKdlPWvbxWZg@postgres-awb2.railway.internal:5432/railway')
 }
+
 
 REDIS_URL= os.environ.get('REDIS_URL')
 
