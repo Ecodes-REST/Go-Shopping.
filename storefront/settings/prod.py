@@ -12,6 +12,12 @@ DATABASES = {
     'default': dj_database_url.config('postgresql://postgres:rReYgaApwcrnjwBhEGQPtKdlPWvbxWZg@postgres-awb2.railway.internal:5432/railway')
 }
 
+if os.getenv('RAILWAY_ENVIRONMENT') == 'production':
+    # This is a Railway production deployment, so use the prod settings
+    from .prod import *
+else:
+    # This is not a Railway production deployment, so use the dev settings
+    from .dev import *
 
 REDIS_URL= os.environ.get('REDIS_URL')
 
