@@ -9,8 +9,9 @@ SECRET_KEY= os.environ.get('SECRET_KEY')
 ALLOWED_HOSTS = ['name-it-we-got-it-production.up.railway.app']
 
 
+
 DATABASES = {
-    'default': dj_database_url.config(default='postgresql://postgres:rReYgaApwcrnjwBhEGQPtKdlPWvbxWZg@junction.proxy.rlwy.net:35278/railway')
+    'default': dj_database_url.os.environ.get('DATABASE_URL')
 }
 
 REDIS_URL= os.environ.get('REDIS_URL')
