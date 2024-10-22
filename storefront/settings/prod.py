@@ -38,5 +38,6 @@ EMAIL_PORT = os.environ.get('EMAIL_PORT', 2525)
 #HTTPS settings
 SESSION_COOKIE_SECURE= True
 CSRF_COOKIE_SECURE= True
+CSRF_COOKIE_SAMESITE = 'Lax'
 CSRF_TRUSTED_ORIGINS = ['https://go-shopping-production.up.railway.app']
 
