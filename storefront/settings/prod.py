@@ -10,7 +10,7 @@ ALLOWED_HOSTS = ['go-shopping-production.up.railway.app']
 
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.config(default=os.environ.get('Postgres-AWb2.DATABASE_URL'))
 }
 
 
